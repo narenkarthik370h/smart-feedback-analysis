@@ -1,0 +1,38 @@
+## Frontend
+```
+frontend/
+├── node_modules/                    # Dependencies
+│
+├── public/
+│   ├── favicon.ico                  # Site favicon
+│   ├── index.html                   # HTML template
+│   ├── logo192.png                  # App logo (192x192)
+│   ├── logo512.png                  # App logo (512x512)
+│   ├── manifest.json                # PWA manifest
+│   └── robots.txt                   # Search engine directives
+│
+├── src/
+│   ├── components/
+│   │   ├── AdminPanel.js            # Admin dashboard interface
+│   │   ├── Dashboard.js             # Main dashboard view
+│   │   ├── FeedbackForm.js          # Feedback submission form
+│   │   ├── Login.js                 # Login component
+│   │   ├── Register.js              # Registration component
+│   │   └── UserHistory.js           # User feedback history
+│   │
+│   ├── context/
+│   │   └── AuthContext.js           # Authentication context provider
+│   │
+│   ├── App.css                      # Application styles
+│   ├── App.js                       # Main application component
+│   ├── App.test.js                  # App component tests
+│   ├── index.css                    # Global styles
+│   ├── index.js                     # Application entry point
+│   ├── logo.svg                     # React logo
+│   ├── reportWebVitals.js           # Performance monitoring
+│   └── setupTests.js                # Test configuration
+│
+├── .gitignore                       # Git ignore rules
+├── package.json                     # Project dependencies and scripts
+├── package-lock.json                # Locked dependency versions
+└── README.md                        # Project documentation

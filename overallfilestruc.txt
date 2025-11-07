@@ -1,0 +1,102 @@
+backend/
+├── src/
+│   ├── config/
+│   │   ├── database.js              # MongoDB connection configuration
+│   │   ├── environment.js           # Environment variables validation
+│   │   └── constants.js             # Application constants
+│   │
+│   ├── controllers/
+│   │   ├── auth.controller.js       # Authentication logic
+│   │   └── feedback.controller.js   # Feedback handling logic
+│   │
+│   ├── middleware/
+│   │   ├── auth.middleware.js       # JWT verification
+│   │   ├── error.middleware.js      # Global error handler
+│   │   ├── validation.middleware.js # Request validation
+│   │   └── rateLimiter.middleware.js # API rate limiting
+│   │
+│   ├── models/
+│   │   ├── User.model.js            # User schema
+│   │   └── Feedback.model.js        # Feedback schema
+│   │
+│   ├── routes/
+│   │   ├── index.js                 # Route aggregator
+│   │   ├── auth.routes.js           # Authentication endpoints
+│   │   └── feedback.routes.js       # Feedback endpoints
+│   │
+│   ├── services/
+│   │   ├── auth.service.js          # Business logic for authentication
+│   │   ├── feedback.service.js      # Business logic for feedback
+│   │   ├── email.service.js         # Email functionality
+│   │   └── sentiment.service.js     # Sentiment analysis logic
+│   │
+│   ├── utils/
+│   │   ├── validators.js            # Input validation helpers
+│   │   ├── response.js              # Standardized API responses
+│   │   ├── logger.js                # Logging utility
+│   │   └── asyncHandler.js          # Async error wrapper
+│   │
+│   ├── dto/
+│   │   ├── auth.dto.js              # Data transfer objects for auth
+│   │   └── feedback.dto.js          # Data transfer objects for feedback
+│   │
+│   └── app.js                       # Express app setup
+│
+├── tests/
+│   ├── unit/
+│   │   ├── controllers/             # Controller unit tests
+│   │   ├── services/                # Service unit tests
+│   │   └── utils/                   # Utility unit tests
+│   │
+│   └── integration/
+│       ├── auth.test.js             # Authentication integration tests
+│       └── feedback.test.js         # Feedback integration tests
+│
+├── node_modules/                    # Dependencies
+├── .env                             # Environment variables (not in git)
+├── .env.example                     # Example environment variables template
+├── .gitignore                       # Git ignore rules
+├── package.json                     # Project dependencies and scripts
+├── package-lock.json                # Locked dependency versions
+├── server.js                        # Application entry point
+└── README.md                        # Project documentation
+```
+
+## Frontend
+```
+frontend/
+├── node_modules/                    # Dependencies
+│
+├── public/
+│   ├── favicon.ico                  # Site favicon
+│   ├── index.html                   # HTML template
+│   ├── logo192.png                  # App logo (192x192)
+│   ├── logo512.png                  # App logo (512x512)
+│   ├── manifest.json                # PWA manifest
+│   └── robots.txt                   # Search engine directives
+│
+├── src/
+│   ├── components/
+│   │   ├── AdminPanel.js            # Admin dashboard interface
+│   │   ├── Dashboard.js             # Main dashboard view
+│   │   ├── FeedbackForm.js          # Feedback submission form
+│   │   ├── Login.js                 # Login component
+│   │   ├── Register.js              # Registration component
+│   │   └── UserHistory.js           # User feedback history
+│   │
+│   ├── context/
+│   │   └── AuthContext.js           # Authentication context provider
+│   │
+│   ├── App.css                      # Application styles
+│   ├── App.js                       # Main application component
+│   ├── App.test.js                  # App component tests
+│   ├── index.css                    # Global styles
+│   ├── index.js                     # Application entry point
+│   ├── logo.svg                     # React logo
+│   ├── reportWebVitals.js           # Performance monitoring
+│   └── setupTests.js                # Test configuration
+│
+├── .gitignore                       # Git ignore rules
+├── package.json                     # Project dependencies and scripts
+├── package-lock.json                # Locked dependency versions
+└── README.md                        # Project documentation
