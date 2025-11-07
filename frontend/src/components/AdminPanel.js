@@ -83,7 +83,7 @@ function AdminPanel() {
     if (!window.confirm('⚠️ Delete ALL feedbacks?')) return;
     try {
       setLoading(true);
-      await axios.delete('http://localhost:5000/api/feedback/clear');
+      await axios.delete('`${process.env.REACT_APP_API_URL}/api/feedback/clear');
       setFeedbacks([]);
       alert('✅ All cleared!');
     } catch (err) {

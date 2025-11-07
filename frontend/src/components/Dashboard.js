@@ -32,10 +32,10 @@ function Dashboard() {
       let endpoint;
       if (isAdmin) {
         // Admin: Sabhi feedbacks ka summary
-        endpoint = 'http://localhost:5000/api/feedback/summary';
+        endpoint = '`${process.env.REACT_APP_API_URL}/api/feedback/summary';
       } else {
         // Regular User: Sirf apne feedbacks ka summary
-        endpoint = 'http://localhost:5000/api/feedback/my-summary';
+        endpoint = '`${process.env.REACT_APP_API_URL}/api/feedback/my-summary';
       }
       
       const res = await axios.get(endpoint);

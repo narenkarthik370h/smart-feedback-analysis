@@ -32,7 +32,7 @@ function FeedbackForm() {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/feedback', {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/feedback`, {
         name: isAuthenticated ? user.name : name,
         email: isAuthenticated ? user.email : email,
         product: product,                         // 👈 SEND PRODUCT
