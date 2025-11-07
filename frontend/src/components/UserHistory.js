@@ -22,7 +22,7 @@ function UserHistory() {
   const fetchHistory = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('`${process.env.REACT_APP_API_URL}/api/feedback/my-feedbacks');
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/feedback/my-feedbacks`);
       setFeedbacks(res.data.feedbacks);
       setError(null);
     } catch (err) {

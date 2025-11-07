@@ -28,14 +28,11 @@ function Dashboard() {
     try {
       setLoading(true);
       
-      // 🎯 FIXED: Admin ko ALL data, User ko ONLY apne feedbacks
       let endpoint;
       if (isAdmin) {
-        // Admin: Sabhi feedbacks ka summary
-        endpoint = '`${process.env.REACT_APP_API_URL}/api/feedback/summary';
+        endpoint = `${process.env.REACT_APP_API_URL}/api/feedback/summary`;
       } else {
-        // Regular User: Sirf apne feedbacks ka summary
-        endpoint = '`${process.env.REACT_APP_API_URL}/api/feedback/my-summary';
+        endpoint = `${process.env.REACT_APP_API_URL}/api/feedback/my-summary`;
       }
       
       const res = await axios.get(endpoint);

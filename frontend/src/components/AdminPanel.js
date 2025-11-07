@@ -30,7 +30,7 @@ function AdminPanel() {
   const fetchAllFeedbacks = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('http://localhost:5000/api/feedback');
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/feedback`);
       setFeedbacks(res.data.feedbacks);
       setError(null);
     } catch (err) {
@@ -70,7 +70,7 @@ function AdminPanel() {
     if (!window.confirm('Delete this feedback?')) return;
     try {
       setDeleteLoading(id);
-      await axios.delete(`http://localhost:5000/api/feedback/${id}`);
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/feedback/${id}`);
       setFeedbacks(feedbacks.filter(f => f._id !== id));
     } catch (err) {
       alert('Delete failed');
@@ -83,7 +83,7 @@ function AdminPanel() {
     if (!window.confirm('⚠️ Delete ALL feedbacks?')) return;
     try {
       setLoading(true);
-      await axios.delete('`${process.env.REACT_APP_API_URL}/api/feedback/clear');
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/feedback/clear`);
       setFeedbacks([]);
       alert('✅ All cleared!');
     } catch (err) {
