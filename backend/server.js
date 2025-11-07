@@ -52,7 +52,7 @@ app.use((err, req, res, next) => {
 
 // 404 handler
 app.use((req, res) => {
-  res.status(404).json({ error: 'Route not found' });
+  res.status(404).json({  message: 'Backend is running' });
 });
 
 const PORT = process.env.PORT || 5000;
